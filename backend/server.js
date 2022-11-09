@@ -123,7 +123,7 @@ app.post("/deleteStudent", async function (req, res) {
 
 app.post("/editstudent", async function (req, res) {
   let reqBody = req.body;
-  let data = await updateTeacher(reqBody.name, reqBody.age, reqBody.hometown, reqBody.id);
+  let data = await updatestudent(reqBody.name, reqBody.age, reqBody.hometown, reqBody.id);
 
   res.setHeader("Content-Type", "application/json");
   res.end(JSON.stringify(data));
